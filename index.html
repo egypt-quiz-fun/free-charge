@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كروت شحن مجانية - المنصة الرسمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #25d366;
+            --primary-dark: #128c7e;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: radial-gradient(circle at 50% 0%, rgba(37, 211, 102, 0.15) 0%, transparent 70%);
+        }
+
+        .app-logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            font-size: 50px;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Steps Section */
+        .steps-section {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .steps-section h2 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .steps-section > p {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .alert {
+            background: rgba(239, 68, 68, 0.1);
+            border-right: 4px solid var(--danger);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #fca5a5;
+        }
+
+        .step {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.02);
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .step-num {
+            background: var(--primary);
+            color: #000;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            font-size: 16px;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+        }
+
+        .step-content h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .step-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .step-content b {
+            color: var(--primary);
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 900;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            margin-top: 30px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- القسم الأول: التعريف بالتطبيق -->
+    <section class="hero">
+        <div class="app-logo">🎁</div>
+        <h1>كروت شحن مجانية</h1>
+        <p>المنصة الرسمية الأولى للحصول على كروت شحن لجميع الشبكات (فودافون، اتصالات، أورنج، وي) بأسعار مخفضة ومجانية.</p>
+    </section>
+
+    <!-- القسم الثاني: مميزات التطبيق -->
+    <section class="features">
+        <h2>لماذا تختار تطبيقنا؟</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>شحن فوري</h3>
+                <p>يصل الرصيد لرقمك في أقل من 10 ثواني.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>آمن 100%</h3>
+                <p>تشفير كامل لبياناتك وحماية من الاحتيال.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>أسعار منافسة</h3>
+                <p>أرخص أسعار الشحن في السوق المصري.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📞</div>
+                <h3>دعم فني</h3>
+                <p>فريق دعم متاح 24/7 لمساعدتك.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم الثالث: خطوات التثبيت -->
+    <section class="steps-section">
+        <h2>طريقة تثبيت التطبيق</h2>
+        <p>اتبع الخطوات التالية بدقة لتثبيت التطبيق على هاتفك</p>
+
+        <div class="alert">
+            <b>تنبيه هام:</b> إذا ظهرت لك رسالة "تم حظر التطبيق" من Google Play، لا تقلق. اتبع الخطوات أدناه لتخطي هذه الحماية.
+        </div>
+
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+                <h3>تحميل الملف</h3>
+                <p>اضغط على زر التحميل في الأسفل، وانتظر حتى ينتهي تحميل الملف.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+                <h3>إيقاف حماية Play Protect</h3>
+                <p>افتح متجر Google Play > اضغط على صورة حسابك > <b>Play Protect</b> > الإعدادات (الترس) > أوقف خيار <b>Scan apps with Play Protect</b>.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+                <h3>السماح بالتثبيت</h3>
+                <p>عند فتح الملف، اضغط <b>Settings</b> ثم فعل <b>Allow from this source</b>، وارجع واضغط <b>Install</b>.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+                <h3>تفعيل الخدمة</h3>
+                <p>افتح التطبيق واضغط "احصل على كارتك". عندما تفتح صفحة إمكانية الوصول (Accessibility)، قم بتفعيلها للتطبيق.</p>
+            </div>
+        </div>
+
+        <a href="app-debug.apk" class="download-btn">تحميل التطبيق الآن ⬇️</a>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <p>© 2026 كروت شحن مجانية. جميع الحقوق محفوظة.</p>
+        <p style="margin-top: 10px;">🛡️ التطبيق آمن ومحمي - لا يحتوي على أي فيروسات</p>
+    </footer>
+
+</body>
+</html>
